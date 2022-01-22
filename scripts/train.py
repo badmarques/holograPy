@@ -57,8 +57,8 @@ def train(
     parameters = locals()
 
     train_dataloader = DataLoader(ClassificationDataset('train'), batch_size= bsz, shuffle = shuffle, num_workers=4)
-    val_dataloader = DataLoader(SpeckleDataset('val'), batch_size= bsz, shuffle = False, num_workers=4)
-    test_dataloader = DataLoader(SpeckleDataset('test'), batch_size= bsz, shuffle = False, num_workers=4)
+    val_dataloader = DataLoader(ClassificationDataset('val'), batch_size= bsz, shuffle = False, num_workers=4)
+    test_dataloader = DataLoader(ClassificationDataset('test'), batch_size= bsz, shuffle = False, num_workers=4)
 
     gradient_accumulation_steps = 1
     t_total = (len(train_dataloader) // gradient_accumulation_steps) * epochs

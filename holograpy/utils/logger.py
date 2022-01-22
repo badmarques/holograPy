@@ -2,7 +2,7 @@ import termcolor
 import logging
 import copy
 import os
-from sspkl import settings
+from holograpy import settings
 
 
 def set_logger(context, verbose=False):

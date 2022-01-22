@@ -21,7 +21,7 @@ from holograpy.layers import Classifier
 #                param.data.uniform_(-0.1, 0.1)
 
 class ClassificationModel(pl.LightningModule):
-    def __init__(self, optimizer_args: Dict[str, int]):
+    def __init__(self, optimizer_args):
         super().__init__()
         self.optimizer_args = optimizer_args
         self.model = resnet.resnet34(pretrained=False)

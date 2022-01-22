@@ -20,7 +20,7 @@ class ClassificationDataset(Dataset):
     def __init__(self, split):
 
         self.logger = set_logger("ClassificationDataset")
-        path = settings.CLASSIFICATION_DATASET_PATH[split]
+        path = settings.DATASET_PATH[split]
 
         self.img_urls  = get_image_url(path, 'png')
 

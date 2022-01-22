@@ -14,9 +14,9 @@ DATA_PATH = Path(ROOT, "data")
 MODELS_PATH = Path(ROOT, "models")
 LOG_PATH = Path(ROOT, "data", "log.txt")
 
-TRAIN_PATH = Path(ROOT, "data", "dataset","training")
-VAL_PATH= Path(ROOT, "data", "dataset", "validation")
-TEST_PATH = Path(ROOT, "data", "dataset", "test")
+TRAIN_PATH = Path(ROOT, "data", "classification","train")
+VAL_PATH= Path(ROOT, "data", "classification", "val")
+TEST_PATH = Path(ROOT, "data", "classification", "test")
 DATASET_PATH = {"train": TRAIN_PATH, "val": VAL_PATH, "test": TEST_PATH}
 
 Path(ROOT, "models").mkdir(parents=True, exist_ok=True) # Model checkpoints or features
